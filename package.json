@@ -9,8 +9,8 @@
   "skpm": {
     "name": "Datazier Lens",
     "manifest": "src/manifest.json",
-    "identifier": "datazier.lens",
-    "appcast": "https://api.sketchpacks.com/v1/plugins/datazier.lens/appcast",
+    "identifier": "datazier-lens",
+    "appcast": "https://api.sketchpacks.com/v1/plugins/datazier-lens/appcast",
     "main": "plugin.sketchplugin",
     "assets": [
       "assets/**/*"
