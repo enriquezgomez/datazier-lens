@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <form id="selectFontAndUse">
+    <select id="fontDropdown">
+      <optgroup label="─────────────────"></optgroup>
+      <option id="inspectFont" disabled="disabled">Helvetica</option>
+      <optgroup label="─────────────────"></optgroup>
+    </select>
+
+    <span role="button" tabindex=0 id="use">Use</span>
+  </form>
+
+  <div id="viewer">
+    <svg id="SVG" width="435px" height="435px">
+      <path id="glyph" fill-opacity=".06" fill="#9EB6B8" stroke="#9EB6B8" stroke-width=".14" stroke-opacity="0.7"></path>
+      <path id="glyphTwo" fill-opacity=".06" fill="#9EB6B8" stroke="#9EB6B8" stroke-width=".14" stroke-opacity="0.7"></path>
+    </svg>
+  </div>
+
+  <div class="wrapper">
+    <div class="leftAligned">
+
+      <h5 id="panoseFormula">&nbsp;min / max</h5>
+      <h1 id="panoseTitle">Contrast</h1>
+      <form id="panoseBreakdown">
+        <label for="panoseNumber">
+          <span id="panoseSubstitution"></span>
+        </label>
+        <output id="panoseNumber"></output>
+        <label><span>&nbsp;≙ </span></label><label id="panoseMeaning" for="panoseNumber"></label>
+      </form>
+
+      <form id="measure">
+        <label for="lengthInput">
+          <span id="measurement">Distance</span>
+          <span>: </span>
+        </label>
+        <output id="lengthOutput"></output>
+        <input id="lengthInput" type="range" min="0" step="any">
+      </form>
+
+    </div>
+  </div>
+
+  <form>
+    <select id="panoseDropdown">
+      <optgroup label="─────────────────"></optgroup>
+      <option disabled="disabled">- &#160Select Panose</option>
+      <optgroup label="─────────────────"></optgroup>
+      <option>Serif Style</option>
+      <option>Weight</option>
+      <option>Proportion</option>
+      <option selected="selected">Contrast</option>
+      <option>X-Height</option>
+    </select>
+
+    <span role="button" tabindex=0 id="render">Render</span>
+  </form>
+
+  <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+  <script src="../webview.js"></script>
+</body>
+
+</html>

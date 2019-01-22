@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./sort.css">
+  </head>
+
+  <body>
+
+    <form id="selectClassAndType">
+       <select id="panoseDropdown">
+         <optgroup label="─────────────────"></optgroup>
+         <option disabled="disabled">- &#160Select Panose</option>
+         <optgroup label="─────────────────"></optgroup>
+         <option value="serif">Serif Style</option>
+         <option value="weight">Weight</option>
+         <option value="proportion">Proportion</option>
+         <option value="contrast" selected="selected">Contrast</option>
+         <option value="xHeight">X-Height</option>
+       </select>
+
+      <select id="classDropdown">
+         <optgroup label="─────────────────"></optgroup>
+         <option id="selectClass" disabled="disabled">- &#160Apply Filter</option>
+         <optgroup label="─────────────────"></optgroup>
+         <option>No Filter</option>
+         <option>No Fit</option>
+         <option>No Contrast</option>
+         <option>Very Low</option>
+         <option>Low</option>
+         <option>Medium Low</option>
+         <option>Medium</option>
+         <option>Medium High</option>
+         <option>High</option>
+         <option>Very High</option>
+       </select>
+
+      <span role="button" tabindex=0 id="use">Use</span>
+    </form>
+
+    <div id="scroller">
+        <div id="viewer"></div>
+        <svg id="SVG" width="0" height="0"></svg>
+        <p id="thread-anchor"></p>
+    </div>
+
+    <!-- notice the "../" here. It's because webview.js will be compiled in a different folder -->
+    <script src="../sort.js"></script>
+  </body> 
+</html>

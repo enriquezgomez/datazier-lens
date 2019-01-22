@@ -1,0 +1,232 @@
+#thread-anchor {
+	display: none;
+}
+
+html {
+  box-sizing: border-box;
+  background: white;
+  cursor: default;  /* Force the default cursor, even on text */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+:root{
+	--grape: #773376;
+	--seafoam: rgba(113,238,184,0.7);
+	--ether: #9EB6B8;
+}
+
+#scroller {
+	height: 844px;
+	overflow: scroll;
+}
+
+#selectClassAndType {
+	padding: 1.4em;
+	background: rgba(158,182,184, .02);
+	border-bottom: 2px solid rgba(158,182,184, .14);
+}
+
+#viewer, .glyphCell { 
+	display: flex;
+}
+
+#viewer {	
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+	padding-left: 1.25em;
+}
+
+.glyphCell {
+	text-align: center;
+	padding: 0 .6vw 3.6vw; 
+}
+
+.glyphView {
+	padding: 2.2vw;
+	width: 15vw;
+	height: 15vw;
+}
+
+.glyphPath {
+	fill: var(--ether);
+	fill-opacity: .06;
+	stroke: var(--ether);
+	stroke-width: .5;
+	stroke-opacity: .7;
+}
+
+.glyphFace, .glyphClass {
+	font-family: 'Mont SemiBold';
+	position: absolute;
+}
+
+.glyphClass {
+	font-size: 1.3vw;
+	bottom: -1.4em;
+	width: 100%;
+	color: black;
+}
+
+.glyphFace {
+	font-size: 1.15vw;
+	top: 14.4vw;
+	width: 15vw;
+	color: var(--grape);
+}
+
+.arrow {
+	color: palevioletred;
+}
+
+.wrapper, form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: darkslategray;
+}
+
+form {
+	padding: 1em 0 0 0;
+}
+
+.leftAligned {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	min-width: 25em;
+	max-width: 29em;
+}
+
+h1 {
+	font: 1.8em 'Mont SemiBold';
+	letter-spacing: .01em;
+}
+
+h5 {
+	font: .8em 'Mont';
+}
+
+#panoseBreakdown {
+	margin-top: -1em;
+	padding-bottom: 0em;
+}
+
+#measure {
+	padding: 2.4em 0 2.7em 0;
+}
+
+label span {
+	font: 1.2em "Mont ExtraLight"; /*.85em */
+}
+
+label, #measurement {
+	font: 1em "Mont Book";
+	padding-right: .35em;
+	letter-spacing: 1.37px;
+}
+
+#measurement {
+	padding: 0;
+}
+
+#panoseSubstitution, #measure {
+	padding-left: .13em;
+}
+
+#panoseMeaning {
+	font: 1.1em "Mont Bold";
+	letter-spacing: 1.1px;
+}
+
+#panoseSubstitution {
+	letter-spacing: 1px;
+}
+
+#panoseSubstitution, #panoseMeaning {
+	white-space: nowrap;
+}
+
+input[type="range"]{
+  -webkit-appearance:none;
+  width: 21.5em;
+  height: .13em;
+  background: rgba(113,238,184,0.9);
+  opacity: 0.6;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  width: 2em;
+  height: 2em;
+  border-radius: 100%;
+  background: white;
+  border: .1em solid var(--grape);
+  cursor: pointer;
+}
+
+output {
+	height: 4.1em;
+	width: 4.1em;
+	border-radius: 100%;
+	padding: 1em .5em;
+	border: .1em solid var(--seafoam);
+	font: 1em "Mont Heavy";
+	text-align: center;
+	line-height: 2em;
+	letter-spacing: 1px;
+}
+
+select, span[role="button"] {
+	font: .85em "Mont Book";
+	height: 3.2em;
+	border: .3em double rgba(0,0,0,0.1);
+	border-radius: 4em;
+	background: white;
+	padding: 0 3em 0 1.5em;
+	line-height: 2.75em;
+	color: slategray;
+	margin-right: 1.5em;
+}
+
+select {
+	width: 258px; /*margin: 0 .75em;*/
+	-webkit-appearance: none;
+	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" fill="none" stroke-width=".7" stroke="#773376"><path d="M9.914 11.086l-2.829 2.829 8.914 8.914 8.914-8.914-2.828-2.828-6.086 6.086z"/></svg>') 98% / 14% no-repeat white;
+}
+
+span[role="button"] {
+	padding: 0;
+	text-align: center;
+	width: 100px;
+}
+
+form *:focus {
+	outline: none; 
+}
+
+form *:focus, #fontDropdown {
+	box-shadow: 0 0 0 .1em rgba(113, 238, 184, .5);
+	color: black
+}
+/*
+form:first-child {
+	padding-top: 1.4em;
+}
+*/
+/* Remove outline for non-keyboard :focus 
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+}
+
+	border: .3em double var(--seafoam);
+	box-shadow: 0 0 0 .1em rgba(113, 238, 184, .5);
+
+.js-focus-visible .focus-visible {
+	outline-color: lightgreen;
+}*/

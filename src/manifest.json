@@ -1,0 +1,25 @@
+{
+  "name": "Datazier Lens",
+  "author": "Victor Enriquez",
+  "authorEmail": "vicrock7x@hotmail.com",
+  "compatibleVersion": 3,
+  "bundleVersion": 1,
+  "commands": [
+    {
+      "name": "Inspect Font",
+      "identifier": "inspect",
+      "script": "./inspect.js"
+    },
+    {
+      "name": "Sort Font Book",
+      "identifier": "sort",
+      "script": "./sort.js"
+    }
+  ],
+  "menu": {
+    "title": "Datazier Lens",
+    "items": [
+      "inspect", "sort"
+    ]
+  }
+}
